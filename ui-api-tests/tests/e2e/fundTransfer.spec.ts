@@ -17,7 +17,7 @@ test ('fund transfer', async({page})=> {
     await fundsTransfer.selectToAccount('14898')
     await fundsTransfer.fillAmount(1)
     await fundsTransfer.transfer()
-    await page.screenshot({path: 'fundtransferred.png', fullPage: true})
+    await page.screenshot({path: '../../snapshots/fundtransferred.png', fullPage: true})
     await expect(page.getByText('Transfer Complete!')).toBeVisible()
 
 
