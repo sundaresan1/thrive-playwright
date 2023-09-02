@@ -1,0 +1,5 @@
+[credentials]
+url='http://127.0.0.1:8080/parabank/'
+apiBaseurl='http://127.0.0.1:8080/parabank/services/bank'
+username = 'sundaresan'
+password = 'sundar2k'

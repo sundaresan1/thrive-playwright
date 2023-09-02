@@ -1,0 +1,17 @@
+{
+  "name": "ui-tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.37.1"
+  },
+  "dependencies": {
+    "@iarna/toml": "^2.2.5",
+    "toml": "^3.0.0"
+  }
+}
