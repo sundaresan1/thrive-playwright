@@ -1,4 +1,4 @@
-import {test, expect} from '@playwright/test'
+import {test, expect, Browser} from '@playwright/test'
 import LoginPage from '../../pages/loginPage'
 import { readCredentialsFromTOML } from '../../utils/config'
 import FundTransferPage from '../../pages/fundsTransfer'
@@ -12,13 +12,10 @@ test ('fund transfer', async({page})=> {
 
     const fundsTransfer = new FundTransferPage(page)
     await page.waitForTimeout(5000)
-
-    await fundsTransfer.selectFromAccount('Replace From account#')
-    await fundsTransfer.selectToAccount('Replace To account#')
+    await fundsTransfer.selectFromAccount('13566')
+    await fundsTransfer.selectToAccount('13677')
     await fundsTransfer.fillAmount(1)
     await fundsTransfer.transfer()
     await page.screenshot({path: './snapshots/fundtransferred.png', fullPage: true})
     await expect(page.getByText('Transfer Complete!')).toBeVisible()
-
-
 })

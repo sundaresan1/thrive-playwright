@@ -31,7 +31,12 @@ export default defineConfig({
     video: {
       mode: 'on',
       size: { width: 640, height: 480 }
+    },
+    headless: false,
+    launchOptions:{
+      slowMo: 1000,
     }
+
   },
 
   /* Configure projects for major browsers */
